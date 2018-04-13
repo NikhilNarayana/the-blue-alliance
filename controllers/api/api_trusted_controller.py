@@ -313,6 +313,8 @@ class ApiTrustedAddEventMedia(ApiTrustedBaseController):
 
         MediaManipulator.createOrUpdate(media_to_put)
 
+        self.response.out.write(json.dumps({'Success': "Media successfully added"}))
+
 
 class ApiTrustedUpdateEventInfo(ApiTrustedBaseController):
     """
